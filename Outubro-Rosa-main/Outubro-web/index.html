@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#fbf9f6">
+	<meta name="description" content="Informação confiável, sinais de alerta e orientação para fazer mamografia pelo SUS.">
+	<title>Outubro Rosa | Informação que acolhe</title>
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="topbar">
+		<nav class="nav wrap" aria-label="Navegação principal">
+			<a class="brand" href="#inicio" aria-label="Outubro Rosa, início"><span class="brand-mark">⌁</span><span><span class="brand-name">Outubro Rosa</span><span class="brand-sub">Cuidado que salva vidas</span></span></a>
+			<div class="nav-links" id="nav-links"><a href="#inicio">Início</a><a href="#artigos">Artigos &amp; Notícias</a><a href="#guia-sinais">Sinais &amp; Sintomas</a><a href="#unidades-proximas">Unidades próximas</a><a href="#sus">Onde Fazer Exames (SUS)</a></div>
+			<a class="nav-cta" href="#sus">Agende Mamografia</a>
+			<button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero" id="inicio">
+			<div class="wrap hero-grid">
+				<div class="hero-copy">
+					<span class="eyebrow">Campanha Nacional de Conscientização</span>
+					<h1>O diagnóstico precoce transforma histórias. <em>Conhecimento que salva vidas.</em></h1>
+					<p>Mais diálogo. Mais prevenção. Mais cuidado com quem você ama. Quando descoberto em estágios iniciais, o câncer de mama tem até <strong>95% de chance de cura</strong>, segundo o INCA. Estamos aqui para guiar cada passo do seu cuidado.</p>
+					<div class="hero-actions"><a class="button" href="#guia-sinais">Explorar Guia Completo <span class="arrow">→</span></a><a class="button button-light" href="#sus">＋ Orientações para Mamografia</a></div>
+					<div class="trust"><div class="trust-logos" aria-hidden="true"><span>INCA</span><span>SBM</span><span>SUS</span></div><span>Orientações alinhadas com as diretrizes do Ministério da Saúde.</span></div>
+				</div>
+				<div class="hero-art hope-focus" aria-label="Mulheres apoiam uma sobrevivente do câncer de mama">
+					  <div class="hero-photo"><video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/videos/7659139/pexels-photo-7659139.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=627&amp;fit=crop&amp;w=1200" aria-label="Mulheres aplaudem uma paciente sobrevivente de câncer, em um momento de esperança"><source src="https://videos.pexels.com/video-files/7659139/7659139-hd_1080_1920_25fps.mp4" type="video/mp4"></video><span class="photo-shade"></span></div>
+					<div class="wave-navy"></div><div class="wave-rose"></div>
+					<div class="stat-float"><span class="heart">♥</span><span><strong>95%</strong><small>Cura com detecção nos primeiros estágios</small></span></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-gray stats" aria-labelledby="stats-title">
+			<div class="wrap">
+				<div class="section-heading"><div><span class="eyebrow">Evidências Científicas</span><h2 id="stats-title">O Impacto Real do Rastreamento no Brasil</h2></div><p>Números consolidados pelo Instituto Nacional de Câncer (INCA) e Sociedade Brasileira de Mastologia (SBM).</p></div>
+				<div class="stats-grid">
+					<article class="metric"><span class="metric-number">95%</span><h3>Chance de Cura</h3><p>Quando tumores são detectados em estágio inicial, o tratamento tem maiores chances de sucesso.</p></article>
+					<article class="metric"><span class="metric-number">74 mil</span><h3>Novos Casos/Ano</h3><p>Estimativa nacional trienal. O câncer de mama é o tipo mais comum entre mulheres no país.</p></article>
+					<article class="metric"><span class="metric-number">50–69</span><h3>Anos Prioritários</h3><p>Faixa etária com mamografia de rastreamento bienal recomendada e gratuita pelo SUS.</p></article>
+					<article class="metric"><span class="metric-number">30%</span><h3>Prevenção Ativa</h3><p>Hábitos saudáveis, atividade física e controle do peso podem ajudar a reduzir riscos.</p></article>
+				</div>
+				<div class="source-note"><span>✓ Fontes oficiais: INCA, Ministério da Saúde e Sociedade Brasileira de Mastologia.</span><a href="#artigos">Ler notas técnicas completas →</a></div>
+			</div>
+		</section>
+
+		<section class="section stories" id="artigos">
+			<div class="wrap">
+				<div class="section-heading"><div><span class="eyebrow">Cobertura Especial</span><h2>Reportagens &amp; Notícias Atualizadas</h2></div><p>Apurações jornalísticas, avanços na medicina diagnóstica e direitos essenciais de cada cidadã.</p></div>
+				<div class="stories-grid">
+					  <article class="feature-story"><div class="feature-image"><img src="https://images.unsplash.com/photo-1758691462863-9e1b8a863140?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Médica conversa com paciente durante uma consulta de saúde" loading="lazy"><span class="tag">GUIA CLÍNICO · G1 SAÚDE</span></div><div class="story-body"><span class="byline">◷ 5 min de leitura · Por Redação Saúde &amp; Mastologia</span><h3>Mamografia: como funciona o exame padrão-ouro e por que o rastreamento salva milhares de vidas</h3><p>Especialistas esclarecem o procedimento, o manejo do desconforto e como a tecnologia digital pode sinalizar alterações antes de qualquer nódulo ser palpável.</p><a class="read-link" href="#sus">Ler reportagem completa →</a></div></article>
+					<div class="story-stack">
+						<article class="small-story"><div><div class="small-story-meta"><span>CONSCIENTIZAÇÃO</span><span>Ontem</span></div><h3>Autoexame vs. Rastreamento: conhecer o próprio corpo não substitui a mamografia</h3><p>O toque corporal estimula o autoconhecimento, mas tumores em estágio inicial raramente são palpáveis.</p></div><a class="read-link" href="#guia-sinais">Continuar lendo →</a></article>
+						<article class="small-story"><div><div class="small-story-meta"><span>LEGISLAÇÃO &amp; CIDADANIA</span><span>3 dias atrás</span></div><h3>Direitos da paciente no SUS: a Lei dos 60 Dias e a cirurgia de reconstrução gratuita</h3><p>Conheça a legislação que assegura prazos para o início do tratamento na rede pública.</p></div><a class="read-link" href="#sus">Continuar lendo →</a></article>
+						<article class="small-story"><div><div class="small-story-meta"><span>BEM-ESTAR &amp; ROTINA</span><span>5 dias atrás</span></div><h3>Estilo de vida protetor: atividade física moderada diminui os riscos</h3><p>Movimento regular e hábitos saudáveis também fazem parte do cuidado integral.</p></div><a class="read-link" href="#guia-sinais">Continuar lendo →</a></article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-gray signs" id="guia-sinais">
+			<div class="wrap">
+				<div class="center-heading"><span class="eyebrow">Guia de Atenção Prática</span><h2>Sinais &amp; Alterações que Exigem Consulta</h2><p>O corpo envia mensagens sutis. Conheça manifestações que devem ser avaliadas por um profissional de saúde.</p></div>
+				<div class="sign-grid">
+					<article class="sign-card"><span class="sign-icon">○</span><h3>Nódulo Endurecido e Fixo</h3><p>Caroço no seio ou na região axilar, geralmente indolor e que não desaparece após o ciclo menstrual.</p><span class="sign-label">＋ Investigação prioritária</span></article>
+					  <article class="sign-card"><span class="sign-icon">♧</span><h3>Secreção no Mamilo</h3><p>Saída espontânea de líquido cristalino ou sanguinolento, sem compressão mecânica voluntária.</p><span class="sign-label">＋ Avaliação clínica</span></article>
+					<article class="sign-card"><span class="sign-icon">▦</span><h3>Pele com Aspecto “Casca de Laranja”</h3><p>Edema, repuxamento, vermelhidão contínua ou mudança na textura da pele sobre a mama.</p><span class="sign-label">＋ Alteração dermatológica</span></article>
+					<article class="sign-card"><span class="sign-icon">↕</span><h3>Inversão ou Retração Papilar</h3><p>Mamilo que começou a afundar ou mudou abruptamente de posição ou simetria natural.</p><span class="sign-label">＋ Mudança anatômica</span></article>
+					<article class="sign-card"><span class="sign-icon">✳</span><h3>Assimetria ou Inchaço Rápido</h3><p>Aumento repentino no volume de uma das mamas ou surgimento de covinhas na pele.</p><span class="sign-label">＋ Verificação clínica</span></article>
+					<article class="sign-card notice"><div><span class="eyebrow">Aviso Fundamental</span><h3>Nem todo nódulo é maligno</h3><p>Alterações podem ter causas benignas. Só uma avaliação profissional pode confirmar o diagnóstico com segurança.</p></div><a class="read-link" href="#sus">Buscar acolhimento na UBS mais próxima →</a></article>
+				</div>
+				<div class="alert"><span class="alert-icon">✚</span><div><strong>Sentiu algo diferente durante o banho ou troca de roupa?</strong><p>Não espere pelo mês de outubro. O SUS oferece consultas e encaminhamentos durante o ano inteiro.</p></div></div>
+			</div>
+		</section>
+
+		<section class="section section-gray nearby" id="unidades-proximas" aria-labelledby="nearby-title">
+			<div class="wrap">
+				<div class="nearby-head"><div><span class="eyebrow">Rede de Saúde · Belo Horizonte</span><h2 id="nearby-title">Unidades de Saúde em Venda Nova</h2></div><p>UBS, clínicas, hospitais e centros de diagnóstico mapeados em um raio de 5 km da regional Venda Nova.</p></div>
+				<div class="nearby-controls"><button class="button" id="nearby-button" type="button"><span aria-hidden="true">⌖</span> Buscar em Venda Nova</button><p id="nearby-status" role="status" aria-live="polite">Ponto de referência fixo: Venda Nova, Belo Horizonte.</p></div>
+				<div class="nearby-layout"><div class="health-map" id="health-map" role="region" aria-label="Mapa de unidades de saúde em Venda Nova, Belo Horizonte"></div><section class="nearby-results" aria-labelledby="nearby-results-title"><div class="nearby-results-head"><h3 id="nearby-results-title">Unidades encontradas</h3><span id="nearby-count" aria-live="polite">0</span></div><div class="unit-list" id="unit-list"><p class="nearby-empty">Busque unidades em um raio de 5 km de Venda Nova.</p></div></section></div>
+				<p class="nearby-credit">Mapa © OpenStreetMap. Busca via Photon, com dados colaborativos do OpenStreetMap.</p>
+			</div>
+		</section>
+
+		<section class="section sus-guide" id="sus">
+			<div class="wrap guide-inner"><span class="eyebrow">Acesso Universal à Saúde</span><h2>Onde e Como Fazer Sua Mamografia pelo SUS</h2><p>O exame de rastreamento é um direito garantido. Siga estes passos para realizar o agendamento em seu município:</p>
+				<div class="steps">
+					<article class="step"><span class="step-num">1</span><div><h3>Vá até sua UBS ou Posto de Saúde</h3><p>Apresente seu documento de identidade e Cartão SUS na Unidade Básica do seu bairro para conversar com a equipe de saúde.</p></div></article>
+					<article class="step"><span class="step-num">2</span><div><h3>Receba a solicitação médica</h3><p>A equipe avaliará a indicação adequada para você e orientará sobre o acompanhamento e a periodicidade do exame.</p></div></article>
+					<article class="step"><span class="step-num">3</span><div><h3>Agendamento pelo sistema regulador</h3><p>A unidade encaminha o pedido para uma clínica, hospital conveniado ou unidade móvel disponível na sua região.</p></div></article>
+				</div>
+				<div class="hotline"><div class="hotline-title"><span class="phone-icon">◔</span><div><h3>Disque Saúde 136</h3><p>Ligação gratuita em todo o Brasil para tirar dúvidas sobre filas e unidades.</p></div></div><a class="button" href="tel:136">Ligar Agora</a></div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer><div class="wrap"><div class="footer-grid"><div><h3>Outubro Rosa</h3><p>Plataforma editorial humanizada e orientada por evidências científicas, dedicada à disseminação do diagnóstico precoce e acolhimento no Brasil.</p><p><strong>Disque Saúde 136 · SUS</strong></p></div><div><h4>Navegação Editorial</h4><ul><li><a href="#inicio">Início &amp; Destaques</a></li><li><a href="#artigos">Artigos &amp; Notícias</a></li><li><a href="#guia-sinais">Guia prático de prevenção</a></li><li><a href="#guia-sinais">Sinais de alerta</a></li><li><a href="#sus">Orientações sobre exames (SUS)</a></li></ul></div><div><h4>Canais Oficiais &amp; Suporte</h4><p><strong>Disque Saúde:</strong> 136</p><p>Informação e orientação gratuita pelo SUS.</p><p>Em caso de dúvida, procure uma unidade de saúde.</p></div><div><h4>Fontes Confiáveis de Saúde</h4><ul><li>Instituto Nacional de Câncer (INCA)</li><li>Ministério da Saúde</li><li>Sociedade Brasileira de Mastologia</li></ul></div></div><div class="footer-bottom"><span>© 2025 Outubro Rosa · Informação, cuidado e acolhimento.</span><span>Conteúdo educativo. Consulte sempre um profissional de saúde.</span></div></div></footer>
+
+	<aside class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+		<button class="accessibility-toggle" id="accessibility-toggle" type="button" aria-label="Abrir ferramentas de acessibilidade" aria-expanded="false" aria-controls="accessibility-panel">
+			<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="2.2"/><path d="M4 8.5h16M12 7v6m0 0-4 7m4-7 4 7M6.5 9l2 5h7l2-5"/></svg>
+		</button>
+		<section class="accessibility-panel" id="accessibility-panel" aria-labelledby="accessibility-title" hidden>
+			<header class="accessibility-panel-head"><h2 id="accessibility-title">Acessibilidade</h2><button class="accessibility-close" id="accessibility-close" type="button" aria-label="Fechar ferramentas de acessibilidade">×</button></header>
+			<div class="accessibility-panel-body">
+				<section class="accessibility-group" aria-labelledby="font-size-title">
+					<h3 id="font-size-title">Tamanho do texto</h3>
+					<div class="accessibility-actions">
+						<button id="decrease-font" type="button" aria-label="Diminuir fonte">A−</button>
+						<button id="increase-font" type="button" aria-label="Aumentar fonte">A+</button>
+					</div>
+					<output class="font-size-value" id="font-size-value" aria-live="polite">100%</output>
+				</section>
+				<section class="accessibility-group" aria-labelledby="read-aloud-title">
+					<h3 id="read-aloud-title">Leitura da página</h3>
+					<label class="accessibility-speed-label" for="reading-speed">Velocidade <output id="reading-speed-value" for="reading-speed">1×</output></label>
+					<input class="accessibility-speed" id="reading-speed" type="range" min="0.75" max="2" step="0.25" value="1" aria-valuetext="1 vez">
+					<div class="accessibility-actions"><button id="read-page" type="button">▶ Ler página</button><button id="read-selection" type="button">▶ Ler seleção</button><button id="pause-reading" type="button" disabled>Ⅱ Pausar</button><button id="stop-reading" type="button" disabled>■ Parar</button></div>
+				</section>
+				<section class="accessibility-group" aria-labelledby="translate-title">
+					<h3 id="translate-title">Traduzir texto selecionado</h3>
+					<label class="accessibility-label" for="translation-language">Idioma de destino</label>
+					<select id="translation-language"><option value="en">Inglês</option><option value="es">Espanhol</option><option value="fr">Francês</option><option value="de">Alemão</option><option value="it">Italiano</option><option value="ja">Japonês</option></select>
+					<button class="accessibility-command" id="translate-selection" type="button">Traduzir seleção</button>
+					<p class="accessibility-privacy">O texto selecionado será enviado ao serviço MyMemory para tradução.</p>
+					<p class="accessibility-result" id="translation-result" role="status" aria-live="polite">Selecione um trecho da página para traduzir.</p>
+				</section>
+				<section class="accessibility-group" aria-labelledby="libras-title">
+					<h3 id="libras-title">Tradução em Libras</h3>
+					<button class="accessibility-command" id="open-libras" type="button">Abrir VLibras</button>
+				</section>
+				<p class="accessibility-status" id="accessibility-status" role="status" aria-live="polite"></p>
+			</div>
+		</section>
+	</aside>
+
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+	<script src="script.js" defer></script>
+</body>
+</html>
